@@ -1,5 +1,5 @@
 // src/Dashboard.js
-const API_BASE_URL = 'https://backendtareas-m6b7.onrender.com/api/tareas';
+const API_BASE_URL = 'https://backendtareas-m6w7.onrender.com/api/tareas';
 
 // Función auxiliar para obtener el token guardado
 const getAuthHeaders = () => {

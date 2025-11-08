@@ -1,6 +1,6 @@
 // src/Auth.js
 
-const API_BASE_URL = 'https://backendtareas-m6b7.onrender.com/api/usuarios';
+const API_BASE_URL = 'https://backendtareas-m6w7.onrender.com/api/usuarios';
 
 // Función para guardar el token y la info del usuario en el navegador
 const saveAuthData = (token, idUsuario, correo) => {
