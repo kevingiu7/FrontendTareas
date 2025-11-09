@@ -32,7 +32,6 @@ const getRegisterFormHtml = () => `
         <h1>Crear Cuenta</h1>
         <span>usa tu correo electrónico para el registro</span>
         
-        <input type="text" placeholder="ID de Usuario (Ej: KEVIN2)" name="idUsuario" required>
         <input type="text" placeholder="Nombre" name="NombreUsuario" required>
         <input type="text" placeholder="Apellido Paterno" name="ApellidoUsuarioPaterno" required>
         <input type="text" placeholder="Apellido Materno" name="ApellidoUsuarioMaterno" required>
