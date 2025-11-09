@@ -10,20 +10,27 @@ const isUserAuthenticated = () => {
     return localStorage.getItem('authToken') !== null;
 };
 
+// src/main.js (Modificación del bloque else)
+
+// ...
+
 const renderApp = () => {
     appContainer.innerHTML = ''; 
 
     if (isUserAuthenticated()) {
-        // MOSTRAR: Dashboard de Tareas (¡REAL!)
+        // MOSTRAR: Dashboard de Tareas
         appContainer.innerHTML = renderDashboard();
         initDashboardLogic(renderApp); // Pasa renderApp como callback para el logout
         
     } else {
-        // MOSTRAR: Formulario de Login/Registro
-        appContainer.innerHTML = renderAuthForm(true, renderApp);
-        initAuthLogic(true, renderApp);
+        // MOSTRAR: Contenedor Slider de Login/Registro
+        // Ya no se requiere el parámetro 'true'
+        appContainer.innerHTML = renderAuthForm(); 
+        initAuthLogic(renderApp);
     }
 };
+
+
 
 // Iniciar la aplicación
 renderApp();
