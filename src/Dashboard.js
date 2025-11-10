@@ -82,7 +82,7 @@ const deleteTarea = async (id) => {
     }
 };
 
-// --- FUNCIÓN DE UTILIDAD DE UI ---
+// Función auxiliar para obtener clases según el estado de la tarea
 const getStatusClasses = (estado) => {
     // Clases de color para la tarjeta, el badge y el título
     switch (estado) {
@@ -139,7 +139,7 @@ export const renderDashboard = () => {
     `;
 };
 
-// Muestra un Toast de Bootstrap (MEJORA UX)
+// Muestra un Toast de Bootstrap 
 const showToast = (title, message, isError = false) => {
     const toastEl = document.getElementById('liveToast');
     const toastBody = document.getElementById('toast-body');
@@ -279,7 +279,7 @@ const renderTaskForm = (tarea = null) => {
 // --- COMPONENTE Secundario: Lista de Tareas (READ/DELETE) ---
 const renderTaskList = () => {
     
-    // Uso de la estructura de Tarjetas de Bootstrap (MEJORA UI/UX)
+    
     const pendingCount = tasks.filter(t => t.estado !== 'completada').length;
 
     let html = `
@@ -316,10 +316,10 @@ const renderTaskList = () => {
                                     </p>
                                 </div>
                                 <div class="btn-group ms-3" role="group">
-                                    <button class="btn btn-sm btn-info edit-btn" data-id="${tarea._id}" title="Editar Tarea">
+                                    <button class="btn btn-ms btn-info edit-btn" data-id="${tarea._id}" title="Editar Tarea">
                                         <i class="bi bi-pencil-square"></i>
                                     </button>
-                                    <button class="btn btn-sm btn-danger delete-btn" data-id="${tarea._id}" title="Eliminar Tarea">
+                                    <button class="btn btn-ms btn-danger delete-btn" data-id="${tarea._id}" title="Eliminar Tarea">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </div>
